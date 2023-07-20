@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+
+  
+
+{% for beep in beeps|dictsortreversed:"created_at" %}
+<div class="container">
+
+  <br>
+<div class="card text-center">
+    <div class="card-header">
+        {{ beep.username }}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"> 
+      </h5>
+      <p class="card-text">{{ beep.message }}</p>
+    </div>
+    <div class="card-footer text-body-secondary">
+        {{ beep.created_at|date:"H:i · d-m-Y" }}
+    </div>
+  </div>
+
+  {% endfor %}
+
+
+{% endblock %}
+

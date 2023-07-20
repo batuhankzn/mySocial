@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 style="padding: 10px;">Hoşgeldin {{ user.username }}</h2>
+<h3 style="padding: 10px;">Toplam Beeps: {{ countBeeps }}</h3>
+
+
+{% for selfbeep in self_beeps %}
+<div class="container">
+    <br>
+    <div class="card text-center">
+        <div class="card-header">
+            {{ selfbeep.username }}
+        </div>
+        <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text">{{ selfbeep.message }}</p>
+            <a href="#" class="btn btn-danger">Sil</a>
+        </div>
+        <div class="card-footer text-body-secondary">
+            {{ selfbeep.created_at|date:"H:i · d-m-Y" }}
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}

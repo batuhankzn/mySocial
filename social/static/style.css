@@ -1,0 +1,15 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card {
+    margin-left: auto;
+    margin-right: auto;
+    width:500px;
+}
+
+.card-date{
+    text-align: right;
+    font-size: small;
+}
+

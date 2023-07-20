@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{%block content%}
+
+<div class="container">
+<form action="" method="post">
+    {% csrf_token %}
+  <div class="mb-3">
+    <label class="form-label">Beeps Yaz</label>
+    <textarea class="form-control" id="message" name ="message" rows="3"></textarea>
+    <button type="submit" class="btn btn-primary">Gönder</button>
+
+</div>
+</form>
+</div>
+
+  {%endblock%}
